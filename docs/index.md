@@ -6,8 +6,9 @@ GitHub: [https://github.com/longhongc/linear-algebra-notes](https://github.com/l
 
 ## Repo structure
 - `raws/`: original notes.
-- `docs/`: MkDocs-compatible notes (mainly for LaTeX syntax).
-- `format_raw_to_docs.py`: script that converts `raws/` into `docs/`.
+- `docs/`: MkDocs site root (`index.md` lives here).
+- `docs/notes/`: MkDocs-compatible notes (mainly for LaTeX syntax).
+- `format_raw_to_docs.py`: script that converts `raws/` into `docs/notes/`.
 - `mkdocs.yml`: MkDocs configuration.
 
 ## Resources used
@@ -20,4 +21,4 @@ GitHub: [https://github.com/longhongc/linear-algebra-notes](https://github.com/l
 - Visual Kernel, [*Matrix* series (YouTube)](https://youtube.com/playlist?list=PLWhu9osGd2dB9uMG5gKBARmk73oHUUQZS&si=9g14KcG363GJ7BHS).
 
 ## Notes
-If you want to rebuild the rendered notes, update content in `raws/` and run `format_raw_to_docs.py` to regenerate `docs/`.
+If you want to rebuild the rendered notes, update content in `raws/` and run `format_raw_to_docs.py` to regenerate `docs/notes/`.
