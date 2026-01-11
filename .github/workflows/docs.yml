@@ -39,7 +39,7 @@ jobs:
 
       - name: Transform raws -> docs
         run: |
-          python format_raw_to_docs.py --input raws --output docs
+          python format_raw_to_docs.py
 
       - name: Build site
         run: |
