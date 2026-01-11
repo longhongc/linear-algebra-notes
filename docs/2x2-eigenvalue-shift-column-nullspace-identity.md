@@ -2,16 +2,16 @@
 
 ## Overview
 
-For a \(2\times2\) matrix \(A\) with **distinct eigenvalues** \(\lambda_1, \lambda_2\), a special and useful identity holds:
-\[
+For a $2\times2$ matrix $A$ with **distinct eigenvalues** $\lambda_1, \lambda_2$, a special and useful identity holds:
+$$
 (A - \lambda_1 I)(A - \lambda_2 I) = 0.
-\]
+$$
 
 This identity explains a textbook observation:
 
-> The columns of \(A - \lambda_1 I\) point in the direction of the eigenvector for \(\lambda_2\), and vice versa.
+> The columns of $A - \lambda_1 I$ point in the direction of the eigenvector for $\lambda_2$, and vice versa.
 
-This note explains **why** this happens and why it is special to \(2\times2\) matrices.
+This note explains **why** this happens and why it is special to $2\times2$ matrices.
 
 ---
 
@@ -19,49 +19,49 @@ This note explains **why** this happens and why it is special to \(2\times2\) ma
 
 ### Characteristic polynomial (2×2 case)
 
-For a \(2\times2\) matrix \(A\),
-\[
+For a $2\times2$ matrix $A$,
+$$
 p(\lambda) = \lambda^2 - (\operatorname{tr}A)\lambda + \det A
 = (\lambda - \lambda_1)(\lambda - \lambda_2).
-\]
+$$
 
 Thus,
-\[
+$$
 \lambda_1 + \lambda_2 = \operatorname{tr}A,
 \quad
 \lambda_1\lambda_2 = \det A.
-\]
+$$
 
 ### Cayley–Hamilton theorem
 
 Every square matrix satisfies its own characteristic polynomial:
-\[
+$$
 p(A) = A^2 - (\operatorname{tr}A)A + (\det A)I = 0.
-\]
+$$
 
 Substituting the eigenvalue expressions:
-\[
+$$
 A^2 - (\lambda_1 + \lambda_2)A + \lambda_1\lambda_2 I = 0.
-\]
+$$
 
 This factors as:
-\[
+$$
 (A - \lambda_1 I)(A - \lambda_2 I) = 0.
-\]
+$$
 
 ---
 
 ## 2. Immediate Consequence
 
-For any vector \(v\),
-\[
+For any vector $v$,
+$$
 (A - \lambda_1 I)\big((A - \lambda_2 I)v\big) = 0.
-\]
+$$
 
 Therefore,
-\[
+$$
 \operatorname{Col}(A - \lambda_2 I) \subseteq \ker(A - \lambda_1 I).
-\]
+$$
 
 This is the key structural relationship.
 
@@ -70,37 +70,37 @@ This is the key structural relationship.
 ## 3. Interpreting the Nullspace
 
 By definition,
-\[
+$$
 \ker(A - \lambda_1 I) = E_{\lambda_1},
-\]
-the eigenspace corresponding to \(\lambda_1\).
+$$
+the eigenspace corresponding to $\lambda_1$.
 
-For a \(2\times2\) matrix with **distinct eigenvalues**:
-\[
+For a $2\times2$ matrix with **distinct eigenvalues**:
+$$
 \dim E_{\lambda_1} = 1.
-\]
+$$
 
-So the nullspace is a **one-dimensional line** spanned by the eigenvector \(x_1\).
+So the nullspace is a **one-dimensional line** spanned by the eigenvector $x_1$.
 
 ---
 
-## 4. Rank and Column Space of \(A - \lambda_2 I\)
+## 4. Rank and Column Space of $A - \lambda_2 I$
 
-Since \(\lambda_2\) is an eigenvalue:
-\[
+Since $\lambda_2$ is an eigenvalue:
+$$
 \det(A - \lambda_2 I) = 0,
-\]
-so \(A - \lambda_2 I\) is singular.
+$$
+so $A - \lambda_2 I$ is singular.
 
-In \(2\times2\):
-\[
+In $2\times2$:
+$$
 \operatorname{rank}(A - \lambda_2 I) = 1.
-\]
+$$
 
 Thus,
-\[
+$$
 \dim \operatorname{Col}(A - \lambda_2 I) = 1.
-\]
+$$
 
 ---
 
@@ -108,13 +108,13 @@ Thus,
 
 We now have:
 
-- \(\operatorname{Col}(A - \lambda_2 I) \subseteq \ker(A - \lambda_1 I)\)
+- $\operatorname{Col}(A - \lambda_2 I) \subseteq \ker(A - \lambda_1 I)$
 - Both spaces are 1-dimensional
 
 Therefore,
-\[
+$$
 \operatorname{Col}(A - \lambda_2 I) = \ker(A - \lambda_1 I).
-\]
+$$
 
 ---
 
@@ -122,12 +122,12 @@ Therefore,
 
 Because the column space is one-dimensional:
 
-- Every column of \(A - \lambda_2 I\) is a scalar multiple of the same vector
-- That vector spans \(\ker(A - \lambda_1 I)\)
-- Hence every column points in the direction of the eigenvector for \(\lambda_1\)
+- Every column of $A - \lambda_2 I$ is a scalar multiple of the same vector
+- That vector spans $\ker(A - \lambda_1 I)$
+- Hence every column points in the direction of the eigenvector for $\lambda_1$
 
 Symmetrically:
-- Columns of \(A - \lambda_1 I\) point in the direction of the eigenvector for \(\lambda_2\)
+- Columns of $A - \lambda_1 I$ point in the direction of the eigenvector for $\lambda_2$
 
 ---
 
@@ -135,8 +135,8 @@ Symmetrically:
 
 In the plane:
 
-- \(A - \lambda_2 I\) collapses all vectors onto a single line
-- \(A - \lambda_1 I\) annihilates that line
+- $A - \lambda_2 I$ collapses all vectors onto a single line
+- $A - \lambda_1 I$ annihilates that line
 - Dimension constraints force everything to align with the other eigenvector
 
 ---
@@ -158,10 +158,10 @@ In higher dimensions:
 
 ## Key Takeaway
 
-For a \(2\times2\) matrix with distinct eigenvalues,
-\[
+For a $2\times2$ matrix with distinct eigenvalues,
+$$
 (A - \lambda_1 I)(A - \lambda_2 I) = 0
-\]
+$$
 forces the column space of one eigenvalue shift to coincide with the eigenspace of the other.  
 This dimensional constraint explains why eigenvectors appear directly in the columns when computing them.
 

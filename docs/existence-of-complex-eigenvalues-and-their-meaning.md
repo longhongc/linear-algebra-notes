@@ -22,9 +22,9 @@ This is guaranteed by the **Fundamental Theorem of Algebra**.
 
 ### Characteristic polynomial
 Eigenvalues are defined as roots of the characteristic polynomial:
-\[
+$$
 p(\lambda) = \det(A - \lambda I)
-\]
+$$
 
 Facts:
 - \( p(\lambda) \) is a polynomial of degree \( n \)
@@ -35,9 +35,9 @@ Facts:
 Every degree-\( n \) polynomial with complex coefficients has **exactly \( n \) complex roots**, counting multiplicity.
 
 Therefore:
-\[
+$$
 p(\lambda) = (\lambda - \lambda_1)(\lambda - \lambda_2)\cdots(\lambda - \lambda_n)
-\]
+$$
 and each \( \lambda_i \in \mathbb{C} \) is an eigenvalue of \( A \).
 
 ---
@@ -47,13 +47,13 @@ and each \( \lambda_i \in \mathbb{C} \) is an eigenvalue of \( A \).
 Eigenvalues must be counted with **algebraic multiplicity**.
 
 Example:
-\[
+$$
 A =
 \begin{pmatrix}
 1 & 1 \\
 0 & 1
 \end{pmatrix}
-\]
+$$
 
 - Characteristic polynomial: \( (\lambda - 1)^2 \)
 - One distinct eigenvalue, but **two eigenvalues counted with multiplicity**
@@ -80,9 +80,9 @@ This distinction is crucial in applications.
 If \( A \in \mathbb{R}^{n \times n} \):
 
 - Complex eigenvalues occur in **conjugate pairs**
-\[
+$$
 \lambda = \alpha + i\beta \quad \Rightarrow \quad \bar{\lambda} = \alpha - i\beta
-\]
+$$
 - The number of non-real eigenvalues is always even
 
 ---
@@ -94,9 +94,9 @@ For a **real matrix**:
 - No real eigenvector corresponds to a complex eigenvalue
 
 Reason:
-\[
+$$
 A v = \lambda v
-\]
+$$
 If \( A \) and \( v \) are real but \( \lambda \) is complex, the equation is impossible.
 
 ---
@@ -104,9 +104,9 @@ If \( A \) and \( v \) are real but \( \lambda \) is complex, the equation is im
 ## 7. Meaning for systems of differential equations
 
 Consider:
-\[
+$$
 \dot{x} = A x
-\]
+$$
 
 ### Always solvable
 - Solutions always exist and are unique
@@ -114,13 +114,13 @@ Consider:
 
 ### Complex eigenvalues imply oscillation
 If:
-\[
+$$
 \lambda = \alpha \pm i\beta
-\]
+$$
 then solutions involve:
-\[
+$$
 e^{\alpha t}(\cos \beta t, \sin \beta t)
-\]
+$$
 
 Interpretation:
 - \( \beta \neq 0 \): oscillation / rotation

@@ -3,16 +3,16 @@
 ## 1. Linear Systems and Spectral Decomposition
 
 Consider a linear autonomous system
-\[
+$$
 \mathbf{x}'(t) = A \mathbf{x}(t),
-\]
-where \(A \in \mathbb{R}^{n \times n}\).
+$$
+where $A \in \mathbb{R}^{n \times n}$.
 
 The general solution is constructed from exponential modes of the form
-\[
+$$
 e^{\lambda t}\mathbf{v},
-\]
-where \(\lambda\) is an eigenvalue of \(A\) and \(\mathbf{v}\) is an eigenvector (or generalized eigenvector).
+$$
+where $\lambda$ is an eigenvalue of $A$ and $\mathbf{v}$ is an eigenvector (or generalized eigenvector).
 
 Each eigenvalue contributes a **dynamical mode** to the solution.
 
@@ -20,20 +20,20 @@ Each eigenvalue contributes a **dynamical mode** to the solution.
 
 ## 2. Long-Term Behavior and Dominant Eigenvalues
 
-As \(t \to \infty\), exponential terms behave according to their real parts:
-\[
+As $t \to \infty$, exponential terms behave according to their real parts:
+$$
 e^{\lambda_1 t} \gg e^{\lambda_2 t}
 \quad \text{if} \quad
 \operatorname{Re}(\lambda_1) > \operatorname{Re}(\lambda_2).
-\]
+$$
 
 ### Key Principle
 > **Eigenvalues with the largest real part dominate long-term behavior.**
 
 Consequences:
-- If \(\max \operatorname{Re}(\lambda) < 0\): the system is asymptotically stable.
-- If \(\max \operatorname{Re}(\lambda) > 0\): solutions grow exponentially.
-- If \(\max \operatorname{Re}(\lambda) = 0\): marginal behavior (oscillation or slow growth).
+- If $\max \operatorname{Re}(\lambda) < 0$: the system is asymptotically stable.
+- If $\max \operatorname{Re}(\lambda) > 0$: solutions grow exponentially.
+- If $\max \operatorname{Re}(\lambda) = 0$: marginal behavior (oscillation or slow growth).
 
 Thus, for **qualitative analysis**, not all eigenvalues are equally important.
 
@@ -42,7 +42,7 @@ Thus, for **qualitative analysis**, not all eigenvalues are equally important.
 ## 3. Complete Solutions vs Qualitative Analysis
 
 ### Complete (Closed-Form) Solution
-- Requires **all \(n\) eigenvalues** (counting algebraic multiplicity).
+- Requires **all $n$ eigenvalues** (counting algebraic multiplicity).
 - Requires eigenvectors or generalized eigenvectors.
 - Needed to represent arbitrary initial conditions.
 
@@ -57,9 +57,9 @@ Thus, for **qualitative analysis**, not all eigenvalues are equally important.
 For certain structured matrices (e.g. nonnegative, irreducible):
 
 - There exists a **dominant real eigenvalue**
-  \[
+$$
   \lambda_{\mathrm{PF}} = \rho(A),
-  \]
+$$
   larger in real part than all others.
 - The corresponding eigenvector is strictly positive.
 - Long-term behavior aligns with this single mode.
@@ -84,8 +84,8 @@ Perron–Frobenius adds **positivity, uniqueness, and order structure** to the g
 ## 6. Continuous vs Discrete Time
 
 - **Continuous time (ODE)**:
-  - Dominance determined by largest **real part** of eigenvalues of \(A\).
-- **Discrete time (\(\mathbf{x}_{k+1} = A\mathbf{x}_k\))**:
+  - Dominance determined by largest **real part** of eigenvalues of $A$.
+- **Discrete time ($\mathbf{x}_{k+1} = A\mathbf{x}_k$)**:
   - Dominance determined by largest **modulus** eigenvalue.
 
 Both rely on the same spectral growth principle.
