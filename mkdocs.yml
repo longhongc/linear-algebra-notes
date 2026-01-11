@@ -13,8 +13,53 @@ markdown_extensions:
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-# Optional: define nav explicitly (recommended once you have multiple pages)
-# nav:
-#   - Home: index.md
-#   - Chapter 1: chapter1.md
-
+nav:
+  - Home: index.md
+  - Notes:
+      - 2x2-eigenvalue-shift-column-nullspace-identity.md
+      - algebraic-vs-geometric-multiplicity.md
+      - cofactors-inverse-and-adjugate-identity.md
+      - complex-exponential-derivative-physical-meaning.md
+      - determinant-linearity-in-each-row.md
+      - diagonalizable-vs-invertible-matrices.md
+      - diagonalization-jordan-form-geometry.md
+      - discrete-vs-continuous-markov-matrices.md
+      - dominant-eigenvalues-qualitative-behavior-linear-systems.md
+      - eigendecomposition-vs-spectral-decomposition.md
+      - eigenvalue-one-markov-matrix.md
+      - euler-formula-rotation-differential-equation.md
+      - existence-of-complex-eigenvalues-and-their-meaning.md
+      - fourier-series-as-projection-in-hilbert-space.md
+      - geometric-meaning-rows-columns-orthonormal.md
+      - geometric-series-inverse-and-convergence.md
+      - hilbert-space-convolution-fourier-diagonalization.md
+      - inverse-of-transpose-identity.md
+      - linear-algebra-matrix-cheat-sheet-summary.md
+      - linear-systems-eigenvectors-and-exponential-solutions.md
+      - lu-decomposition-with-pivoting.md
+      - matrix-exponential-properties.md
+      - orthogonal-matrices-rotations-reflections-permutations.md
+      - perron-frobenius-dynamics-and-diagonalizability.md
+      - positive-definite-and-local-optimization.md
+      - positive-definite-matrix.md
+      - positive-definite-unsymmetric-matrices.md
+      - positive-definite-vs-entrywise-positivity.md
+      - projection-matrix-column-space.md
+      - projection-matrix-onto-a-line.md
+      - properties-of-ata-positive-definiteness.md
+      - properties-of-triangular-matrices.md
+      - qr-decomposition-and-gram-schmidt.md
+      - rank-one-matrix-decomposition.md
+      - rank-one-matrix-uvt-properties.md
+      - real-spectral-theorem-matrix-classes.md
+      - schur-decomposition-unitary-triangularization.md
+      - sensitivity-linear-systems-condition-number.md
+      - similarity-invariance-eigenvalues-multiplicities.md
+      - similarity-spectral-theorem-jordan-form.md
+      - simultaneous-diagonalization-and-commutativity.md
+      - skew-symmetric-matrix-exponential-orthogonality.md
+      - solutions-of-linear-difference-and-differential-equations.md
+      - spectral-decomposition-orthogonality-clarification.md
+      - stability-trace-determinant.md
+      - trace-equals-sum-of-eigenvalues.md
+      - weighted-least-squares-normal-equations.md
