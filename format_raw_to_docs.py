@@ -149,7 +149,7 @@ def copy_and_format_tree(raw_dir: Path, docs_dir: Path, *, clean_docs: bool) -> 
 
 def main() -> None:
     p = argparse.ArgumentParser(description="Format raw/ markdown into docs/ for MkDocs.")
-    p.add_argument("--raw", default="raws", help="Input directory (default: raw)")
+    p.add_argument("--raw", default="raws", help="Input directory (default: raws)")
     p.add_argument("--docs", default="docs", help="Output directory (default: docs)")
     p.add_argument("--clean", action="store_true", help="Delete output docs/ before regenerating")
     args = p.parse_args()
