@@ -44,7 +44,7 @@ Example (2D rotation):
 $$
 R =
 \begin{bmatrix}
-\cos\theta & -\sin\theta \\
+\cos\theta & -\sin\theta \\\\
 \sin\theta & \cos\theta
 \end{bmatrix}
 $$
@@ -63,7 +63,7 @@ Example (reflection across the $x$-axis):
 $$
 F =
 \begin{bmatrix}
-1 & 0 \\
+1 & 0 \\\\
 0 & -1
 \end{bmatrix}
 $$
@@ -79,7 +79,7 @@ Example (swap coordinate axes):
 $$
 P =
 \begin{bmatrix}
-0 & 1 \\
+0 & 1 \\\\
 1 & 0
 \end{bmatrix}
 $$
@@ -113,7 +113,7 @@ Classification by determinant:
 $$
 \det(A) =
 \begin{cases}
-+1 & \text{rotation} \\
++1 & \text{rotation} \\\\
 -1 & \text{reflection (possibly with rotation)}
 \end{cases}
 $$

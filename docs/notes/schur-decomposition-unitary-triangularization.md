@@ -78,7 +78,7 @@ The matrix now has the block form:
 $$
 U^\ast A U =
 \begin{pmatrix}
-\lambda & * \\
+\lambda & * \\\\
 0 & B
 \end{pmatrix},
 $$
@@ -108,9 +108,9 @@ After \( n \) steps, we obtain:
 $$
 T =
 \begin{pmatrix}
-\lambda_1 & * & \cdots & * \\
-0 & \lambda_2 & \cdots & * \\
-\vdots & \vdots & \ddots & * \\
+\lambda_1 & * & \cdots & * \\\\
+0 & \lambda_2 & \cdots & * \\\\
+\vdots & \vdots & \ddots & * \\\\
 0 & 0 & \cdots & \lambda_n
 \end{pmatrix},
 $$

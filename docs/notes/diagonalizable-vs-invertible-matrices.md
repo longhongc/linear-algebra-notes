@@ -45,7 +45,7 @@ $$
    - A diagonalizable matrix may have zero eigenvalues.
    - Example:
 $$
-     A = \begin{pmatrix}0 & 0 \\ 0 & 0\end{pmatrix}
+     A = \begin{pmatrix}0 & 0 \\\\ 0 & 0\end{pmatrix}
 $$
      This matrix is diagonal (hence diagonalizable) but not invertible.
 
@@ -53,7 +53,7 @@ $$
    - A matrix can be invertible yet lack enough independent eigenvectors.
    - Example:
 $$
-     A = \begin{pmatrix}1 & 1 \\ 0 & 1\end{pmatrix}
+     A = \begin{pmatrix}1 & 1 \\\\ 0 & 1\end{pmatrix}
 $$
      This matrix is invertible, but not diagonalizable because it has only one independent eigenvector.
 

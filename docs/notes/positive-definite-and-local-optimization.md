@@ -35,7 +35,7 @@ The conditions for local behavior are:
 
 The quadratic form can be written as:
 $$
-f(\mathbf{x}) = \mathbf{x}^T A \mathbf{x}, \quad A = \begin{bmatrix} a & b \\ b & c \end{bmatrix}
+f(\mathbf{x}) = \mathbf{x}^T A \mathbf{x}, \quad A = \begin{bmatrix} a & b \\\\ b & c \end{bmatrix}
 $$
 
 This approach generalizes to higher dimensions.

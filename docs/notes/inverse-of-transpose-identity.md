@@ -66,7 +66,7 @@ Let
 $$
 A =
 \begin{pmatrix}
-1 & 2 \\
+1 & 2 \\\\
 3 & 4
 \end{pmatrix}
 $$
@@ -75,7 +75,7 @@ The inverse of $A$ is:
 $$
 A^{-1} =
 \begin{pmatrix}
--2 & 1 \\
+-2 & 1 \\\\
 \frac{3}{2} & -\frac{1}{2}
 \end{pmatrix}
 $$
@@ -84,7 +84,7 @@ Taking its transpose:
 $$
 (A^{-1})^T =
 \begin{pmatrix}
--2 & \frac{3}{2} \\
+-2 & \frac{3}{2} \\\\
 1 & -\frac{1}{2}
 \end{pmatrix}
 $$
@@ -93,7 +93,7 @@ Now transpose first:
 $$
 A^T =
 \begin{pmatrix}
-1 & 3 \\
+1 & 3 \\\\
 2 & 4
 \end{pmatrix}
 $$
@@ -102,7 +102,7 @@ and invert:
 $$
 (A^T)^{-1} =
 \begin{pmatrix}
--2 & \frac{3}{2} \\
+-2 & \frac{3}{2} \\\\
 1 & -\frac{1}{2}
 \end{pmatrix}
 $$

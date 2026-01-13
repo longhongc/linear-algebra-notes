@@ -40,7 +40,7 @@ A non-diagonalizable matrix has at least one **Jordan block** of size $\ge 2$:
 $$
 J = 
 \begin{bmatrix}
-\lambda & 1 \\
+\lambda & 1 \\\\
 0 & \lambda
 \end{bmatrix}
 $$
@@ -80,7 +80,7 @@ When restricting to real matrices, complex eigenvalues cannot appear on the diag
 Instead, each conjugate pair becomes a real $2 \times 2$ block:
 $$
 \begin{bmatrix}
-a & -b \\
+a & -b \\\\
 b & a
 \end{bmatrix}
 $$

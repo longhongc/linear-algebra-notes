@@ -26,7 +26,7 @@ Let
 $$
 A =
 \begin{pmatrix}
-a & b \\
+a & b \\\\
 c & d
 \end{pmatrix}.
 $$

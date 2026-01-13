@@ -63,9 +63,9 @@ where $J$ is block diagonal, with each block of the form
 $$
 J_k(\lambda) =
 \begin{pmatrix}
-\lambda & 1 & & \\
-& \lambda & 1 & \\
-& & \ddots & 1 \\
+\lambda & 1 & & \\\\
+& \lambda & 1 & \\\\
+& & \ddots & 1 \\\\
 & & & \lambda
 \end{pmatrix}.
 $$

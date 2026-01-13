@@ -104,8 +104,8 @@ where
 $$
 e^{\Lambda t} =
 \begin{pmatrix}
-e^{\lambda_1 t} & & \\
-& \ddots & \\
+e^{\lambda_1 t} & & \\\\
+& \ddots & \\\\
 & & e^{\lambda_n t}
 \end{pmatrix}.
 $$

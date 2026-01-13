@@ -27,7 +27,7 @@ A matrix can have all positive entries but still fail to be positive definite.
 $$
 A =
 \begin{pmatrix}
-1 & 2 \\
+1 & 2 \\\\
 2 & 1
 \end{pmatrix}
 $$
@@ -49,7 +49,7 @@ A matrix can be positive definite even if some entries are negative.
 $$
 B =
 \begin{pmatrix}
-2 & -1 \\
+2 & -1 \\\\
 -1 & 2
 \end{pmatrix}
 $$

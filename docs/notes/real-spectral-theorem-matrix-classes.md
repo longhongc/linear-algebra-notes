@@ -60,9 +60,9 @@ There exists an orthogonal matrix \( Q \) such that
 $$
 Q^T A Q =
 \begin{bmatrix}
-0 & -\lambda_1 & & \\
-\lambda_1 & 0 & & \\
-& & \ddots & \\
+0 & -\lambda_1 & & \\\\
+\lambda_1 & 0 & & \\\\
+& & \ddots & \\\\
 & & & 0
 \end{bmatrix},
 $$
