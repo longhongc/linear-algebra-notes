@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
-"""
-Format raw Markdown (LaTeX delimiters \\( \\) and \\[ \\]) into MkDocs-friendly
+r"""
+Format raw Markdown (LaTeX delimiters \( \) and \[ \]) into MkDocs-friendly
 MathJax delimiters ($ ... $ and $$ ... $$), copying from raw/ to docs/notes/.
 
 - Preserves fenced code blocks (``` or ~~~): does not transform inside them.
 - Transforms:
-    \\( ... \\) -> $ ... $
-    \\[ ... \\] -> $$ ... $$ (for display blocks)
+    \( ... \) -> $ ... $
+    \[ ... \] -> $$ ... $$ (for display blocks)
+- Fixes MkDocs/Markdown backslash collapsing inside math:
+    inside $...$ or $$...$$, converts LaTeX row breaks \\ -> \\\\
+    (so MathJax ultimately receives \\ after Markdown parsing)
 """
 
 from __future__ import annotations
@@ -16,13 +19,48 @@ import os
 import re
 import shutil
 from pathlib import Path
-from typing import Iterable
 
 FENCE_RE = re.compile(r"^(\s*)(```+|~~~+)\s*(\w+)?\s*$")
+
+# Match exactly two backslashes not part of a longer run of backslashes.
+# We only want to upgrade \\ -> \\\\ (but not \\\\ -> \\\\\\\\).
+EXACT_DOUBLE_BACKSLASH_RE = re.compile(r"(?<!\\)\\\\(?!\\)")
+
+# Display math: $$ ... $$ (non-greedy, dot matches newline)
+DISPLAY_MATH_RE = re.compile(r"\$\$(.+?)\$\$", re.DOTALL)
+
+# Inline math: $ ... $ but not $$ ... $$.
+# This is a conservative matcher: no newlines inside.
+INLINE_MATH_RE = re.compile(r"(?<!\$)\$(?!\$)([^\n]*?)(?<!\$)\$(?!\$)")
 
 
 def is_markdown_file(path: Path) -> bool:
     return path.suffix.lower() in {".md", ".markdown", ".mdown", ".mkd"}
+
+
+def _escape_latex_linebreaks_in_math(text: str) -> str:
+    r"""
+    Inside $...$ and $$...$$ blocks, upgrade LaTeX line breaks \\ -> \\\\,
+    because Markdown often collapses \\ to \ before MathJax sees it.
+    """
+    def fix_content(s: str) -> str:
+        return EXACT_DOUBLE_BACKSLASH_RE.sub(r"\\\\\\\\", s)
+
+    # 1) Fix display math first (can span multiple lines)
+    def repl_display(m: re.Match) -> str:
+        content = m.group(1)
+        return "$$" + fix_content(content) + "$$"
+
+    text = DISPLAY_MATH_RE.sub(repl_display, text)
+
+    # 2) Fix inline math (single line)
+    def repl_inline(m: re.Match) -> str:
+        content = m.group(1)
+        return "$" + fix_content(content) + "$"
+
+    text = INLINE_MATH_RE.sub(repl_inline, text)
+
+    return text
 
 
 def transform_text_outside_fences(text: str) -> str:
@@ -30,37 +68,20 @@ def transform_text_outside_fences(text: str) -> str:
     Apply transformations to text that is known to contain no fenced code blocks.
     """
     # 1) Display math: lines containing only \[ or \] (allow whitespace)
-    # Convert:
-    #   \[
-    #   ...content...
-    #   \]
-    # to:
-    #   $$
-    #   ...content...
-    #   $$
-    #
-    # We do this line-based to avoid messing with escaped sequences.
     lines = text.splitlines(keepends=True)
     out: list[str] = []
     i = 0
     while i < len(lines):
         line = lines[i]
         if re.match(r"^\s*\\\[\s*$", line):
-            # start display block
             out.append("$$\n")
             i += 1
-            # copy until closing \]
             while i < len(lines) and not re.match(r"^\s*\\\]\s*$", lines[i]):
                 out.append(lines[i])
                 i += 1
             if i < len(lines) and re.match(r"^\s*\\\]\s*$", lines[i]):
                 out.append("$$\n")
                 i += 1
-            else:
-                # unmatched \[ : keep it as-is (fallback)
-                # (We already wrote $$, so revert by wrapping back)
-                # For simplicity, just leave the $$ and proceed.
-                pass
             continue
 
         out.append(line)
@@ -69,11 +90,13 @@ def transform_text_outside_fences(text: str) -> str:
     text2 = "".join(out)
 
     # 2) Inline math: \( ... \) -> $ ... $
-    # Use a conservative regex that does not cross newlines.
-    # (Inline math generally shouldn't contain newlines.)
+    # Conservative: doesn't cross newlines.
     text3 = re.sub(r"\\\(([^ \n].*?[^ \n]?)\\\)", r"$\1$", text2)
 
-    return text3
+    # 3) IMPORTANT: ensure LaTeX row breaks survive Markdown
+    text4 = _escape_latex_linebreaks_in_math(text3)
+
+    return text4
 
 
 def transform_markdown_preserving_fences(src: str) -> str:
@@ -98,15 +121,12 @@ def transform_markdown_preserving_fences(src: str) -> str:
     for line in lines:
         m = FENCE_RE.match(line)
         if m:
-            # fence line
             if not in_fence:
                 flush_outside()
                 in_fence = True
-                fence_token = m.group(2)  # ``` or ~~~ (incl length)
+                fence_token = m.group(2)
                 out.append(line)
             else:
-                # closing fence if same fence style (``` vs ~~~) and length >= opening
-                # Markdown allows closing fence to be >= length of opening fence.
                 if fence_token and (m.group(2).startswith(fence_token[0]) and len(m.group(2)) >= len(fence_token)):
                     in_fence = False
                     fence_token = None
@@ -124,11 +144,9 @@ def transform_markdown_preserving_fences(src: str) -> str:
 
 def copy_and_format_tree(raw_dir: Path, docs_dir: Path, *, clean_docs: bool) -> None:
     if clean_docs and docs_dir.exists():
-        # Danger: only remove files we generate, not mkdocs.yml etc.
-        # Since docs_dir is output, we remove it entirely.
         shutil.rmtree(docs_dir)
 
-    for root, dirs, files in os.walk(raw_dir):
+    for root, _, files in os.walk(raw_dir):
         root_path = Path(root)
         rel = root_path.relative_to(raw_dir)
         out_root = docs_dir / rel
@@ -143,7 +161,6 @@ def copy_and_format_tree(raw_dir: Path, docs_dir: Path, *, clean_docs: bool) -> 
                 dst_text = transform_markdown_preserving_fences(src_text)
                 dst_path.write_text(dst_text, encoding="utf-8")
             else:
-                # copy non-markdown assets (images, etc.)
                 shutil.copy2(src_path, dst_path)
 
 
