@@ -3,9 +3,11 @@
 ## Overview
 
 A **rank-1 matrix** is a matrix that can be written as an outer product
+
 $$
 u v^T
 $$
+
 where $u \in \mathbb{R}^m$ and $v \in \mathbb{R}^n$.
 Such a matrix has rank at most 1.
 
@@ -26,6 +28,7 @@ A = \begin{bmatrix} a_1 & a_2 & \cdots & a_n \end{bmatrix}
 $$
 
 Then:
+
 $$
 A = \sum_{j=1}^n a_j e_j^T
 $$
@@ -45,15 +48,19 @@ where $e_j$ is the $j$-th standard basis vector in $\mathbb{R}^n$.
 ## 2. Rank Factorization
 
 If $\operatorname{rank}(A) = r$, then there exist matrices
+
 $$
 U \in \mathbb{R}^{m \times r}, \quad V \in \mathbb{R}^{n \times r}
 $$
+
 such that
+
 $$
 A = U V^T
 $$
 
 Writing columns:
+
 $$
 U = [u_1, \dots, u_r], \quad V = [v_1, \dots, v_r]
 $$
@@ -72,6 +79,7 @@ $$
 ## 3. Singular Value Decomposition (SVD)
 
 For any matrix $A \in \mathbb{R}^{m \times n}$,
+
 $$
 A = U \Sigma V^T
 $$
@@ -84,6 +92,7 @@ where:
 - $r = \operatorname{rank}(A)$.
 
 This yields:
+
 $$
 A = \sum_{k=1}^r \sigma_k u_k v_k^T
 $$
@@ -109,6 +118,7 @@ where:
 - $\Lambda = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$.
 
 Then:
+
 $$
 A = \sum_{k=1}^n \lambda_k q_k q_k^T
 $$
@@ -123,6 +133,7 @@ $$
 ## 5. Entry-wise Decomposition
 
 Every matrix can be written as:
+
 $$
 A = \sum_{i=1}^m \sum_{j=1}^n A_{ij} e_i e_j^T
 $$

@@ -43,9 +43,10 @@ $$
 $$
 
 - If $|a| < 1$, then $a^{N+1} \to 0$, and the limit exists:
-  $$
+
+$$
   \lim_{N \to \infty} S_N = \frac{1}{1 - a}.
-  $$
+$$
 
 - If $|a| \ge 1$, then $a^{N+1}$ does not go to zero (it grows or oscillates), so the limit does not exist and the series diverges.
 

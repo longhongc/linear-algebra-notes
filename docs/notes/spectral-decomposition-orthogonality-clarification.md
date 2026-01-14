@@ -13,9 +13,11 @@ $$
 
 where:
 - $Q$ is **orthonormal**, meaning
-  $$
+
+$$
   Q^\top Q = QQ^\top = I
-  $$
+$$
+
 - The columns of $$Q$$ are **orthonormal eigenvectors** of $$A$$
 - $\Lambda$ is a **diagonal matrix** containing the real eigenvalues of $$A$$
 
@@ -24,14 +26,16 @@ where:
 ## 2. Orthogonal vs orthonormal vectors
 
 - **Orthogonal vectors** satisfy
-  $$
+
+$$
   v_i^\top v_j = 0 \quad \text{for } i \neq j
-  $$
+$$
 
 - **Orthonormal vectors** satisfy
-  $$
+
+$$
   v_i^\top v_j = \delta_{ij}
-  $$
+$$
 
 Orthonormality is strictly stronger than orthogonality.
 
@@ -52,9 +56,11 @@ This equivalence is special and does **not** hold for general matrices.
 ## 4. The source of confusion: multiplying by a diagonal matrix
 
 Consider
+
 $$
 M = D Q^\top
 $$
+
 where $$D$$ is diagonal (e.g. an eigenvalue matrix).
 
 ### Effect on rows
@@ -63,9 +69,11 @@ where $$D$$ is diagonal (e.g. an eigenvalue matrix).
 
 ### Effect on columns
 Column orthogonality is determined by
+
 $$
 M^\top M = Q D^2 Q^\top
 $$
+
 which is generally **not** the identity matrix.
 
 Therefore, the columns of $$DQ^\top$$ are **not orthogonal in general**, even if the rows are.
@@ -88,9 +96,11 @@ A diagonal matrix performs **anisotropic scaling**:
 - Angles are generally not preserved
 
 Only matrices of the form
+
 $$
 D = c I
 $$
+
 (pure isotropic scaling) preserve orthogonality.
 
 ---

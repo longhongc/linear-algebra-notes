@@ -19,18 +19,23 @@ This matrix projects vectors in \( \mathbb{R}^m \) onto the column space of $A$.
 For any vector \( b \in \mathbb{R}^m \):
 
 - The vector
-  $$
+
+$$
   p = Pb
-  $$
+$$
+
   is the **orthogonal projection of $b$** onto the column space \( C(A) \).
 
 - The vector
-  $$
+
+$$
   e = b - Pb
-  $$
+$$
+
   is the **error (residual)**.
 
 Thus,
+
 $$
 b = Pb + (b - Pb)
 $$
@@ -51,6 +56,7 @@ C(A) \perp N(A^T)
 $$
 
 So every vector \( b \) splits uniquely into two perpendicular components:
+
 $$
 \text{(column space component)} + \text{(orthogonal complement)}
 $$
@@ -77,14 +83,16 @@ is also a projection matrix:
 The projection matrix $P$ satisfies:
 
 - **Idempotence**
-  $$
+
+$$
   P^2 = P
-  $$
+$$
 
 - **Symmetry**
-  $$
+
+$$
   P^T = P
-  $$
+$$
 
 These properties characterize orthogonal projection matrices.
 

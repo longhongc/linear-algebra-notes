@@ -7,9 +7,11 @@ This note explains how solutions of linear **difference equations** and **differ
 ## 1. Problem setup
 
 Let \( A \in \mathbb{C}^{n \times n} \) be a constant matrix, and assume it is **diagonalizable**:
+
 $$
 A = S \Lambda S^{-1},
 $$
+
 where
 - \( S \) is the matrix of eigenvectors,
 - \( \Lambda = \mathrm{diag}(\lambda_1,\dots,\lambda_n) \) is the diagonal matrix of eigenvalues.
@@ -19,22 +21,26 @@ where
 ## 2. Discrete-time system (difference equation)
 
 Consider the linear recurrence
+
 $$
 u_{k+1} = A u_k, \qquad u_0 \text{ given}.
 $$
 
 ### Derivation
 Iterating the recurrence:
+
 $$
 u_k = A^k u_0.
 $$
 
 Using diagonalization:
+
 $$
 A^k = (S \Lambda S^{-1})^k = S \Lambda^k S^{-1}.
 $$
 
 ### Solution
+
 $$
 u_k = S \Lambda^k S^{-1} u_0.
 $$
@@ -49,6 +55,7 @@ $$
 ## 3. Continuous-time system (differential equation)
 
 Consider the linear ODE system
+
 $$
 \frac{du}{dt} = A u(t), \qquad u(0) \text{ given}.
 $$
@@ -58,26 +65,31 @@ $$
 ## 4. Change of variables (key step)
 
 Define a new variable
+
 $$
 v(t) = S^{-1} u(t).
 $$
 
 Differentiate:
+
 $$
 \frac{dv}{dt} = S^{-1} \frac{du}{dt}.
 $$
 
 Substitute \( \frac{du}{dt} = A u \) and \( u = S v \):
+
 $$
 \frac{dv}{dt} = S^{-1} A S v.
 $$
 
 Since \( A = S \Lambda S^{-1} \),
+
 $$
 S^{-1} A S = \Lambda.
 $$
 
 Thus the system becomes
+
 $$
 \frac{dv}{dt} = \Lambda v.
 $$
@@ -87,20 +99,25 @@ $$
 ## 5. Solving the diagonal system
 
 Because \( \Lambda \) is diagonal, the system decouples:
+
 $$
 \frac{dv_i}{dt} = \lambda_i v_i.
 $$
 
 Each scalar equation has solution
+
 $$
 v_i(t) = e^{\lambda_i t} v_i(0).
 $$
 
 In matrix form:
+
 $$
 v(t) = e^{\Lambda t} v(0),
 $$
+
 where
+
 $$
 e^{\Lambda t} =
 \begin{pmatrix}
@@ -115,11 +132,13 @@ $$
 ## 6. Transforming back to the original variables
 
 Since \( u(t) = S v(t) \),
+
 $$
 u(t) = S e^{\Lambda t} v(0).
 $$
 
 Using \( v(0) = S^{-1} u(0) \), we obtain
+
 $$
 u(t) = S e^{\Lambda t} S^{-1} u(0).
 $$
@@ -129,16 +148,19 @@ $$
 ## 7. Matrix exponential viewpoint
 
 The matrix exponential is defined by
+
 $$
 e^{At} = \sum_{k=0}^{\infty} \frac{(At)^k}{k!}.
 $$
 
 If \( A = S \Lambda S^{-1} \), then
+
 $$
 e^{At} = S e^{\Lambda t} S^{-1}.
 $$
 
 Hence the solution can be written compactly as
+
 $$
 u(t) = e^{At} u(0).
 $$

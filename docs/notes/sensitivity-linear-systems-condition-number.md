@@ -53,22 +53,24 @@ $$
 Two right-hand sides:
 
 - Unperturbed:  
-  $$
+
+$$
   \begin{cases}
   u + v = 2 \\\\
   u + 1.0001v = 2
   \end{cases}
   \quad \Rightarrow \quad u = 2, \ v = 0
-  $$
+$$
 
 - Perturbed:  
-  $$
+
+$$
   \begin{cases}
   u + v = 2 \\\\
   u + 1.0001v = 2.0001
   \end{cases}
   \quad \Rightarrow \quad u = 1, \ v = 1
-  $$
+$$
 
 Relative change in \( b \):
 

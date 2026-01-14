@@ -3,14 +3,19 @@
 ## Statement
 
 Let \( A \in \mathbb{R}^{n \times n} \) be a **skew-symmetric matrix**, meaning
+
 $$
 A^T = -A.
 $$
+
 Then for any \( t \in \mathbb{R} \), the matrix exponential
+
 $$
 e^{At}
 $$
+
 is an **orthogonal matrix**, i.e.
+
 $$
 (e^{At})^T e^{At} = I.
 $$
@@ -21,17 +26,20 @@ $$
 
 - **Skew-symmetric matrix**:  
   A matrix \( A \) such that
+
 $$
   A^T = -A.
 $$
 
 - **Orthogonal matrix**:  
   A matrix \( Q \) satisfying
+
 $$
   Q^T Q = I.
 $$
 
 - **Matrix exponential**:
+
 $$
   e^{At} = \sum_{k=0}^{\infty} \frac{(At)^k}{k!}.
 $$
@@ -43,20 +51,25 @@ $$
 Using basic properties of the matrix exponential:
 
 1. Transpose of the exponential:
+
 $$
    (e^{At})^T = e^{(At)^T}.
 $$
 
 2. Since \( A^T = -A \),
+
 $$
    (At)^T = -At,
 $$
+
    so
+
 $$
    (e^{At})^T = e^{-At}.
 $$
 
 3. Multiply:
+
 $$
    (e^{At})^T e^{At} = e^{-At} e^{At} = e^{0} = I.
 $$
@@ -73,9 +86,11 @@ Thus, \( e^{At} \) is orthogonal.
   - Vector lengths are preserved
   - Angles and inner products are preserved
 - Therefore, the dynamical system
+
 $$
   \dot{x}(t) = A x(t)
 $$
+
   represents **pure rotation**, with no growth or decay.
 
 ---
@@ -84,9 +99,11 @@ $$
 
 - All eigenvalues of a real skew-symmetric matrix are **purely imaginary or zero**.
 - The flow \( e^{At} \) is **norm-preserving**:
+
 $$
   \| e^{At} x \| = \| x \|.
 $$
+
 - This property is fundamental in:
   - Rigid body dynamics
   - Hamiltonian systems

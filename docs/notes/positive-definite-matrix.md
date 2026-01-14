@@ -71,13 +71,16 @@ $$
 
 where:
 - Symmetric part:
-  $$
+
+$$
   S = \tfrac12 (A + A^\top)
-  $$
+$$
+
 - Skew-symmetric part:
-  $$
+
+$$
   K = \tfrac12 (A - A^\top)
-  $$
+$$
 
 ---
 
@@ -107,13 +110,17 @@ $$
 ## Final Summary
 - Positive definite matrices are **real symmetric matrices**
 - They satisfy:
-  $$
+
+$$
   x^\top A x > 0 \quad \forall x \neq 0
-  $$
+$$
+
 - All eigenvalues are **strictly positive**
 - They factor naturally as:
-  $$
+
+$$
   A = R^\top R
-  $$
+$$
+
 - Only the **symmetric part** of a matrix affects $x^\top A x$
 

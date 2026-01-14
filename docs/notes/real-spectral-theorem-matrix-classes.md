@@ -7,9 +7,11 @@ This note summarizes which real matrices satisfy the **real spectral theorem**, 
 ## 1. The Real Spectral Theorem
 
 A real matrix \( A \in \mathbb{R}^{n \times n} \) satisfies the **real spectral theorem** if there exists a **real orthogonal matrix** \( Q \) such that
+
 $$
 Q^T A Q = \Lambda,
 $$
+
 where \( \Lambda \) is a **real diagonal matrix**.
 
 Equivalently:
@@ -21,6 +23,7 @@ Equivalently:
 ## 2. Real Symmetric Matrices
 
 ### Definition
+
 $$
 A^T = A.
 $$
@@ -31,9 +34,11 @@ $$
 - There exists an orthonormal eigenbasis.
 
 ### Conclusion
+
 $$
 A = Q \Lambda Q^T
 $$
+
 with \( Q \) orthogonal and \( \Lambda \) real diagonal.
 
 **This is the only class of real matrices that always satisfies the real spectral theorem.**
@@ -43,6 +48,7 @@ with \( Q \) orthogonal and \( \Lambda \) real diagonal.
 ## 3. Real Skew-Symmetric Matrices
 
 ### Definition
+
 $$
 A^T = -A.
 $$
@@ -57,6 +63,7 @@ $$
 
 ### What still holds
 There exists an orthogonal matrix \( Q \) such that
+
 $$
 Q^T A Q =
 \begin{bmatrix}
@@ -66,6 +73,7 @@ Q^T A Q =
 & & & 0
 \end{bmatrix},
 $$
+
 a block-diagonal form with $2 \times 2$ rotation blocks.
 
 ### Conclusion
@@ -77,6 +85,7 @@ a block-diagonal form with $2 \times 2$ rotation blocks.
 ## 4. Real Orthogonal Matrices
 
 ### Definition
+
 $$
 Q^T Q = I.
 $$
@@ -93,9 +102,11 @@ $$
 
 ### Special case
 If a real orthogonal matrix is also symmetric, then:
+
 $$
 Q^T = Q \quad \Rightarrow \quad Q^2 = I,
 $$
+
 and it *is* orthogonally diagonalizable with eigenvalues \( \pm 1 \).
 
 ### Conclusion

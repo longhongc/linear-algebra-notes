@@ -15,6 +15,7 @@ For an \( n \times n \) matrix \( A = (a_{ij}) \):
 
 ### Cofactor
 The **cofactor** corresponding to \( a_{ij} \) is
+
 $$
 C_{ij} = (-1)^{i+j} M_{ij}.
 $$
@@ -31,12 +32,14 @@ The **cofactor matrix** is the matrix whose entries are \( C_{ij} \).
 
 ### Adjugate (Adjoint)
 The **adjugate** of \( A \) is defined as the transpose of the cofactor matrix:
+
 $$
 \operatorname{adj}(A) = \text{Cof}(A)^T.
 $$
 
 ### Inverse via cofactors
 If \( \det(A) \neq 0 \), then \( A \) is invertible and
+
 $$
 A^{-1} = \frac{1}{\det(A)} \operatorname{adj}(A)
 = \frac{1}{\det(A)} \text{Cof}(A)^T.
@@ -51,6 +54,7 @@ $$
 
 ### Diagonal entries
 The \( (i,i) \)-entry of \( A \, \text{Cof}(A)^T \) is
+
 $$
 \sum_j a_{ij} C_{ij}.
 $$
@@ -60,6 +64,7 @@ $$
 
 ### Off-diagonal entries
 For \( i \neq k \), the \( (i,k) \)-entry is
+
 $$
 \sum_j a_{ij} C_{kj}.
 $$
@@ -69,6 +74,7 @@ $$
 - Therefore all off-diagonal entries vanish.
 
 ### Resulting identity
+
 $$
 A \, \text{Cof}(A)^T = \det(A)\, I.
 $$

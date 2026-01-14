@@ -21,20 +21,26 @@ Thus, eigenvalue-based definitions of positive definiteness do not naturally ext
 ## 2. Decomposition into Symmetric and Skew-Symmetric Parts
 
 Any real square matrix \( A \) can be uniquely decomposed as
+
 $$
 A = S + K
 $$
+
 where
+
 $$
 S = \frac{A + A^T}{2} \quad \text{(symmetric)}, \qquad
 K = \frac{A - A^T}{2} \quad \text{(skew-symmetric)}.
 $$
 
 For any vector \( x \),
+
 $$
 x^T K x = 0,
 $$
+
 so the quadratic form satisfies
+
 $$
 x^T A x = x^T S x.
 $$
@@ -49,6 +55,7 @@ Therefore, asking whether an unsymmetric matrix is positive definite is effectiv
 ## 3. Relation to Eigenvalues and Stability
 
 If the symmetric part \( S \) is positive definite, then all eigenvalues \( \lambda \) of \( A \) satisfy
+
 $$
 \operatorname{Re}(\lambda) > 0.
 $$

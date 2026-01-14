@@ -3,9 +3,11 @@
 ## 1. Similarity Transformations as the Unifying Framework
 
 Two matrices $A$ and $B$ are **similar** if
+
 $$
 B = P^{-1} A P
 $$
+
 for some invertible matrix $P$.
 
 Similarity means that $A$ and $B$ represent the **same linear transformation** under different choices of basis. Therefore, studying matrices *up to similarity* is equivalent to classifying linear operators independently of coordinates.
@@ -18,9 +20,11 @@ All major matrix decompositions—diagonalization, the spectral theorem, and the
 ## 2. Diagonalization: The Ideal Similarity Form
 
 If a matrix $A$ has $n$ linearly independent eigenvectors, then it is diagonalizable:
+
 $$
 A = P D P^{-1}
 $$
+
 where $D$ is diagonal with eigenvalues on the diagonal.
 
 Interpretation:
@@ -34,9 +38,11 @@ Diagonalization is the *best possible outcome* under similarity, but it is not a
 ## 3. The Spectral Theorem: Similarity with Orthonormal Structure
 
 The **Spectral Theorem** applies to real symmetric matrices (or complex Hermitian matrices). It states that
+
 $$
 A = Q \Lambda Q^*
 $$
+
 where:
 - $Q$ is orthogonal (or unitary),
 - $\Lambda$ is a real diagonal matrix.
@@ -56,10 +62,13 @@ This additional structure is possible because symmetric/Hermitian matrices are *
 Some matrices do not have enough eigenvectors to be diagonalized. Similarity still applies, but the simplest representative is no longer diagonal.
 
 The **Jordan Canonical Form** states that for any square matrix over an algebraically closed field,
+
 $$
 A = P J P^{-1}
 $$
+
 where $J$ is block diagonal, with each block of the form
+
 $$
 J_k(\lambda) =
 \begin{pmatrix}

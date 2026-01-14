@@ -5,10 +5,13 @@
 For a square matrix \( A \in \mathbb{R}^{n \times n} \):
 
 - An **eigenvalue** \( \lambda \) satisfies
+
 $$
   \det(A - \lambda I) = 0
 $$
+
 - The corresponding **eigenspace** is
+
 $$
   E_\lambda = \ker(A - \lambda I)
 $$
@@ -20,6 +23,7 @@ $$
 **Definition**
 
 The **algebraic multiplicity** of an eigenvalue \( \lambda \) is the number of times \( \lambda \) appears as a root of the characteristic polynomial:
+
 $$
 \det(\lambda I - A)
 $$
@@ -31,9 +35,11 @@ $$
 **Example**
 
 If
+
 $$
 \det(\lambda I - A) = (\lambda - 2)^3(\lambda + 1),
 $$
+
 then the algebraic multiplicity of \( \lambda = 2 \) is **3**.
 
 ---
@@ -43,9 +49,11 @@ then the algebraic multiplicity of \( \lambda = 2 \) is **3**.
 **Definition**
 
 The **geometric multiplicity** of an eigenvalue \( \lambda \) is:
+
 $$
 \dim \ker(A - \lambda I)
 $$
+
 i.e. the number of **linearly independent eigenvectors** associated with \( \lambda \).
 
 **Why “geometric”?**
@@ -57,6 +65,7 @@ i.e. the number of **linearly independent eigenvectors** associated with \( \lam
 ## 4. Key Relationship
 
 For any eigenvalue \( \lambda \):
+
 $$
 1 \le \text{geometric multiplicity} \le \text{algebraic multiplicity}
 $$
@@ -81,15 +90,19 @@ A crucial distinction:
 
 - Eigenvalue: \( \lambda = 1 \)
 - Characteristic polynomial:
+
 $$
   \det(\lambda I - I_3) = (\lambda - 1)^3
 $$
+
   - Algebraic multiplicity = 3
 
 - Eigenspace:
+
 $$
   \ker(I_3 - I_3) = \mathbb{R}^3
 $$
+
   - Infinitely many eigenvectors
   - Dimension = 3
   - Geometric multiplicity = 3
@@ -104,9 +117,11 @@ It counts **independent directions**.
 ## 6. Diagonalizability Connection
 
 A matrix \( A \) is **diagonalizable** if and only if:
+
 $$
 \text{geometric multiplicity} = \text{algebraic multiplicity}
 $$
+
 for every eigenvalue.
 
 If geometric multiplicity is smaller for some eigenvalue, the matrix is **defective**.

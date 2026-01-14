@@ -9,6 +9,7 @@ This note summarizes key structural properties of matrices of the form $A^T A$ f
 Let $A \in \mathbb{R}^{m \times n}$.
 
 We have
+
 $$
 (A^T A)^T = A^T (A^T)^T = A^T A.
 $$
@@ -24,6 +25,7 @@ This holds for all real matrices $A$, regardless of rank or shape.
 ## Positive Semidefiniteness of $A^T A$
 
 For any vector $x \in \mathbb{R}^n$,
+
 $$
 x^T A^T A x = (Ax)^T (Ax) = \|Ax\|^2 \ge 0.
 $$
@@ -39,15 +41,19 @@ This follows directly from the nonnegativity of squared Euclidean norms.
 ## Characterization of Positive Definiteness
 
 A symmetric matrix $M$ is **positive definite** if
+
 $$
 x^T M x > 0 \quad \text{for all } x \neq 0.
 $$
 
 Applying this to $A^T A$:
+
 $$
 x^T A^T A x = \|Ax\|^2 > 0 \quad \text{for all } x \neq 0
 $$
+
 if and only if
+
 $$
 Ax = 0 \Rightarrow x = 0.
 $$

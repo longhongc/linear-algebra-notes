@@ -3,6 +3,7 @@
 ## Statement of the Identity
 
 For a square, invertible matrix $A$, the following identity holds:
+
 $$
 (A^T)^{-1} = (A^{-1})^T
 $$
@@ -25,11 +26,13 @@ If $A$ is not invertible, neither $(A^T)^{-1}$ nor $A^{-1}$ exists, so the ident
 ## Proof
 
 Start from the definition of the inverse:
+
 $$
 A A^{-1} = I
 $$
 
 Take the transpose of both sides:
+
 $$
 (A A^{-1})^T = I^T
 $$
@@ -39,12 +42,14 @@ Using standard transpose properties:
 - $I^T = I$
 
 we obtain:
+
 $$
 (A^{-1})^T A^T = I
 $$
 
 This shows that $(A^{-1})^T$ is a **left inverse** of $A^T$.  
 Since $A^T$ is square, the left inverse equals the right inverse, so:
+
 $$
 (A^T)^{-1} = (A^{-1})^T
 $$
@@ -63,6 +68,7 @@ Because transposition preserves invertibility and only rearranges how the transf
 ## Example
 
 Let
+
 $$
 A =
 \begin{pmatrix}
@@ -72,6 +78,7 @@ A =
 $$
 
 The inverse of $A$ is:
+
 $$
 A^{-1} =
 \begin{pmatrix}
@@ -81,6 +88,7 @@ A^{-1} =
 $$
 
 Taking its transpose:
+
 $$
 (A^{-1})^T =
 \begin{pmatrix}
@@ -90,6 +98,7 @@ $$
 $$
 
 Now transpose first:
+
 $$
 A^T =
 \begin{pmatrix}
@@ -99,6 +108,7 @@ A^T =
 $$
 
 and invert:
+
 $$
 (A^T)^{-1} =
 \begin{pmatrix}

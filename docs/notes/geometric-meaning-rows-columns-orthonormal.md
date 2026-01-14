@@ -5,18 +5,23 @@
 Let \( Q \in \mathbb{R}^{n \times n} \) be a square matrix.
 
 If the **columns of $Q$** are orthonormal, then:
+
 $$
 Q^T Q = I
 $$
+
 which implies:
+
 $$
 Q^T = Q^{-1}
 $$
 
 A consequence is:
+
 $$
 Q Q^T = I
 $$
+
 so the **rows of $Q$** are also orthonormal.
 
 At first glance, this is surprising: the rows generally point in different directions than the columns. Why must they also be orthonormal?
@@ -34,6 +39,7 @@ The correct geometric interpretation comes from viewing $Q$ not as a collection 
 ## Columns: Forward Geometry
 
 The columns of $Q$ are the images of the standard basis vectors:
+
 $$
 Q e_1, \dots, Q e_n
 $$
@@ -43,6 +49,7 @@ If the columns are orthonormal, then:
 - angles are preserved
 
 Formally:
+
 $$
 \langle Qx, Qy \rangle = \langle x, y \rangle
 $$
@@ -56,9 +63,11 @@ Thus, $Q$ is an **isometry** of Euclidean space.
 The rows of $Q$ are the columns of $Q^T$.
 
 Since:
+
 $$
 Q^T = Q^{-1}
 $$
+
 the transpose represents the **inverse rigid motion**.
 
 Rigid motions have rigid inverses:

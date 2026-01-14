@@ -1,9 +1,11 @@
 # Rank-1 Matrices of the Form \( A = u v^T \)
 
 This note summarizes the key algebraic and geometric properties of rank-1 matrices of the form
+
 $$
 A = u v^T
 $$
+
 where $u, v \in \mathbb{R}^n$ (or $\mathbb{C}^n$) are nonzero vectors.
 
 ---
@@ -14,9 +16,11 @@ where $u, v \in \mathbb{R}^n$ (or $\mathbb{C}^n$) are nonzero vectors.
 - Every column of $A$ is a scalar multiple of $u$.
 
 Therefore:
+
 $$
 \text{Col}(A) = \text{span}\{u\}
 $$
+
 $$
 \text{Row}(A) = \text{span}\{v^T\}
 $$
@@ -26,6 +30,7 @@ $$
 ## 2. Action of $A$ on a Vector
 
 For any vector $x$,
+
 $$
 Ax = u(v^T x)
 $$
@@ -43,6 +48,7 @@ Thus, $A$ maps every vector into the direction of $u$.
 ### Nonzero Eigenvalue
 
 Apply $A$ to $u$:
+
 $$
 Au = u(v^T u) = (v^T u)\,u
 $$
@@ -50,6 +56,7 @@ $$
 So:
 - $u$ is an eigenvector
 - The corresponding eigenvalue is
+
 $$
 \lambda = v^T u
 $$
@@ -64,6 +71,7 @@ Since $A$ has rank 1 in an $n$-dimensional space:
 - The eigenvalue $0$ has multiplicity $n-1$.
 
 The eigenspace corresponding to eigenvalue $0$ is:
+
 $$
 \{x : v^T x = 0\} = v^\perp
 $$
@@ -73,16 +81,19 @@ $$
 ## 4. Nullspace
 
 The nullspace of $A$ is:
+
 $$
 \text{Null}(A) = \{x : Ax = 0\}
 $$
 
 From $Ax = u(v^T x)$, we get:
+
 $$
 Ax = 0 \iff v^T x = 0
 $$
 
 Therefore:
+
 $$
 \text{Null}(A) = v^\perp
 $$
@@ -98,6 +109,7 @@ If:
 - $u$ is a **unit vector**
 
 then:
+
 $$
 A = uu^T
 $$
@@ -112,6 +124,7 @@ This matrix is the **orthogonal projection** onto the line spanned by $u$.
   - $0$ with eigenspace $u^\perp$
 
 In this case:
+
 $$
 \text{Null}(A) = u^\perp
 $$

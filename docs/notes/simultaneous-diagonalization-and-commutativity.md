@@ -7,12 +7,15 @@ Let \( A, B \in \mathbb{C}^{n \times n} \) be **diagonalizable matrices**.
 Then the following are equivalent:
 
 1. \( A \) and \( B \) are **simultaneously diagonalizable**, i.e., there exists an invertible matrix \( S \) such that
+
 $$
    A = S D_A S^{-1}, \quad B = S D_B S^{-1},
 $$
+
    where \( D_A \) and \( D_B \) are diagonal matrices.
 
 2. \( A \) and \( B \) **commute**:
+
 $$
    AB = BA.
 $$
@@ -33,20 +36,25 @@ In words:
 ## Why Simultaneous Diagonalization Implies Commutativity
 
 Assume
+
 $$
 A = S D_A S^{-1}, \quad B = S D_B S^{-1}.
 $$
 
 Then
+
 $$
 AB = S D_A D_B S^{-1}, \quad BA = S D_B D_A S^{-1}.
 $$
 
 Since diagonal matrices commute,
+
 $$
 D_A D_B = D_B D_A,
 $$
+
 so
+
 $$
 AB = BA.
 $$

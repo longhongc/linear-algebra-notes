@@ -10,11 +10,13 @@ The standard and universally valid form is the **LU decomposition with pivoting*
 
 ## Standard Form
 For any square matrix \( A \in \mathbb{R}^{n \times n} \), there exists a **permutation matrix** \( P \), a **lower triangular** matrix \( L \), and an **upper triangular** matrix \( U \) such that
+
 $$
 PA = LU.
 $$
 
 Equivalently, since permutation matrices satisfy \( P^{-1} = P^T \),
+
 $$
 A = P^T L U.
 $$
@@ -46,9 +48,11 @@ $$
 
 ### Without Pivoting
 An LU decomposition of the form
+
 $$
 A = LU
 $$
+
 (with no permutation matrix) **does not always exist**.
 
 A sufficient condition for existence without pivoting is:

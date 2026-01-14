@@ -21,6 +21,7 @@ A triangular matrix is invertible **if and only if all diagonal entries are nonz
 
 ## Determinant
 For a triangular matrix \( A \in \mathbb{R}^{n \times n} \),
+
 $$
 \det(A) = a_{11} a_{22} \cdots a_{nn}
 $$
@@ -64,6 +65,7 @@ The rank of a triangular matrix equals the **number of nonzero diagonal entries*
 If \( A \) is triangular, then \( A^k \) is also triangular for any positive integer \( k \).
 
 The diagonal entries satisfy
+
 $$
 \operatorname{diag}(A^k) = (a_{11}^k, a_{22}^k, \dots, a_{nn}^k)
 $$

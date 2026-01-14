@@ -9,17 +9,21 @@ This note summarizes the geometric and algebraic meaning of diagonalization, non
 A square matrix $A \in \mathbb{C}^{n \times n}$ is **diagonalizable** if there exist $n$ linearly independent eigenvectors.
 
 Formally, this means:
+
 $$
 A = PDP^{-1}
 $$
+
 where $D$ is diagonal and the columns of $P$ are eigenvectors.
 
 ### Geometric interpretation
 - The vector space can be decomposed into $n$ independent directions.
 - Each direction evolves **by itself**:
+
 $$
 Av_i = \lambda_i v_i
 $$
+
 - No direction influences or feeds into another.
 - The transformation is a combination of independent scalings (and possibly complex rotations).
 
@@ -32,11 +36,13 @@ Diagonalization represents **complete decoupling of directions**.
 A matrix is **not diagonalizable** when it does not have enough independent eigenvectors.
 
 Over $\mathbb{C}$, every matrix is similar to a **Jordan matrix**:
+
 $$
 A = PJP^{-1}
 $$
 
 A non-diagonalizable matrix has at least one **Jordan block** of size $\ge 2$:
+
 $$
 J = 
 \begin{bmatrix}
@@ -61,6 +67,7 @@ Rotation does **not** come from Jordan blocks.
 
 A real rotation matrix typically has **no real eigenvectors** (except for trivial angles).
 However, over $\mathbb{C}$, it has complex conjugate eigenvalues:
+
 $$
 \lambda = a \pm bi
 $$
@@ -78,6 +85,7 @@ Rotation matrices are **diagonalizable over $\mathbb{C}$**.
 
 When restricting to real matrices, complex eigenvalues cannot appear on the diagonal.
 Instead, each conjugate pair becomes a real $2 \times 2$ block:
+
 $$
 \begin{bmatrix}
 a & -b \\\\
@@ -97,6 +105,7 @@ Jordan blocks indicate **defectiveness**; real rotation blocks do not.
 ## 5. Inner Product Preservation
 
 A matrix preserves the inner product if:
+
 $$
 \langle Ax, Ay \rangle = \langle x, y \rangle
 $$

@@ -7,9 +7,11 @@ This note explains how the **trace** and **determinant** of a matrix can be used
 ## 1. Problem Setup
 
 Consider a linear system of differential equations
+
 $$
 \dot{x} = A x,
 $$
+
 where $A \in \mathbb{R}^{n \times n}$.
 
 The equilibrium $x = 0$ is:
@@ -23,6 +25,7 @@ The equilibrium $x = 0$ is:
 ## 2. Trace and Determinant (2 × 2 Case)
 
 Let
+
 $$
 A =
 \begin{pmatrix}
@@ -32,6 +35,7 @@ c & d
 $$
 
 Definitions:
+
 $$
 \operatorname{tr}(A) = a + d, 
 \qquad
@@ -43,6 +47,7 @@ $$
 ## 3. Relationship to Eigenvalues
 
 Let $\lambda_1, \lambda_2$ be the eigenvalues of $A$. Then:
+
 $$
 \lambda_1 + \lambda_2 = \operatorname{tr}(A),
 \qquad
@@ -58,11 +63,13 @@ Thus:
 ## 4. Characteristic Equation
 
 For a 2 × 2 matrix:
+
 $$
 \lambda^2 - (\operatorname{tr}A)\lambda + \det(A) = 0
 $$
 
 Discriminant:
+
 $$
 \Delta = (\operatorname{tr}A)^2 - 4\det(A)
 $$
@@ -109,6 +116,7 @@ Thus:
 ## 8. Key Takeaway
 
 For 2 × 2 linear systems:
+
 $$
 \boxed{
 \text{Stable} \iff \det(A) > 0 \;\text{and}\; \operatorname{tr}(A) < 0

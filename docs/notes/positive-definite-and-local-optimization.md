@@ -5,9 +5,11 @@
 To determine the nature of a point in multivariable functions:
 
 - **First-order condition**: A point \( \mathbf{x}_0 \) is a stationary point if
-  $$
+
+$$
   \nabla f(\mathbf{x}_0) = 0
-  $$
+$$
+
 - **Second-order condition**: The behavior near a stationary point is determined by the second derivative (the Hessian matrix).
 
 ## Justifying the Use of Quadratic Approximation
@@ -21,6 +23,7 @@ To determine the nature of a point in multivariable functions:
 ## General Quadratic Form in Two Variables
 
 Given:
+
 $$
 f(x, y) = ax^2 + 2bxy + cy^2
 $$
@@ -34,6 +37,7 @@ The conditions for local behavior are:
 ## Matrix Representation and Generalization
 
 The quadratic form can be written as:
+
 $$
 f(\mathbf{x}) = \mathbf{x}^T A \mathbf{x}, \quad A = \begin{bmatrix} a & b \\\\ b & c \end{bmatrix}
 $$
@@ -53,6 +57,7 @@ This approach generalizes to higher dimensions.
 ## Taylor Expansion in Matrix Form
 
 Second-order Taylor expansion at \( \mathbf{x}_0 \):
+
 $$
 f(\mathbf{x}) \approx f(\mathbf{x}_0) + \nabla f(\mathbf{x}_0)^T (\mathbf{x} - \mathbf{x}_0) + \frac{1}{2} (\mathbf{x} - \mathbf{x}_0)^T H (\mathbf{x} - \mathbf{x}_0)
 $$

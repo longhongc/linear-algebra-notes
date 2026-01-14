@@ -2,26 +2,33 @@
 
 ## Definition
 A real square matrix \( A \in \mathbb{R}^{n \times n} \) is **orthogonal** if
+
 $$
 A^T A = A A^T = I.
 $$
+
 Equivalently, the columns (and rows) of $A$ form an **orthonormal basis** of \( \mathbb{R}^n \).
 
 ---
 
 ## Fundamental Properties
 - Inverse equals transpose:
-  $$
+
+$$
   A^{-1} = A^T
-  $$
+$$
+
 - Length and angle preservation:
-  $$
+
+$$
   \|Ax\| = \|x\|, \quad (Ax)^T(Ay) = x^T y
-  $$
+$$
+
 - Determinant:
-  $$
+
+$$
   \det(A) = \pm 1
-  $$
+$$
 
 Orthogonal matrices represent **isometries** of Euclidean space.
 
@@ -36,11 +43,13 @@ A common misconception is that orthogonal matrices represent only rotations. In 
 ## Rotation Matrices
 - Preserve orientation
 - Determinant:
-  $$
+
+$$
   \det(A) = +1
-  $$
+$$
 
 Example (2D rotation):
+
 $$
 R =
 \begin{bmatrix}
@@ -55,11 +64,13 @@ $$
 - Reflect space across a line or plane
 - Reverse orientation
 - Determinant:
-  $$
+
+$$
   \det(A) = -1
-  $$
+$$
 
 Example (reflection across the $x$-axis):
+
 $$
 F =
 \begin{bmatrix}
@@ -76,6 +87,7 @@ $$
 - Some permutations act as reflections
 
 Example (swap coordinate axes):
+
 $$
 P =
 \begin{bmatrix}
@@ -85,18 +97,22 @@ P =
 $$
 
 Properties:
+
 $$
 P^T = P^{-1}
 $$
 
 - Even permutations:
-  $$
+
+$$
   \det(P) = +1
-  $$
+$$
+
 - Odd permutations:
-  $$
+
+$$
   \det(P) = -1
-  $$
+$$
 
 Odd permutations correspond to **reflections**.
 
@@ -110,6 +126,7 @@ An orthogonal matrix may represent:
 - A rotation combined with a reflection
 
 Classification by determinant:
+
 $$
 \det(A) =
 \begin{cases}

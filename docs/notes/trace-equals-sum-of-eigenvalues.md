@@ -22,6 +22,7 @@ This result holds:
 ### Definition
 
 The characteristic polynomial of \( A \) is
+
 $$
 p_A(\lambda) = \det(\lambda I - A).
 $$
@@ -33,12 +34,14 @@ It is a degree-$n$ polynomial.
 ### Expression via Eigenvalues
 
 Over \( \mathbb{C} \), the polynomial factors as
+
 $$
 p_A(\lambda)
 = (\lambda - \lambda_1)(\lambda - \lambda_2)\cdots(\lambda - \lambda_n).
 $$
 
 Expanding the highest-order terms:
+
 $$
 p_A(\lambda)
 = \lambda^n
@@ -52,6 +55,7 @@ $$
 ### Expression via Matrix Invariants
 
 From determinant expansion theory,
+
 $$
 p_A(\lambda)
 = \lambda^n
@@ -67,6 +71,7 @@ This formula depends only on the matrix entries and is always valid.
 ### Coefficient Comparison
 
 Since both expressions describe the same polynomial,
+
 $$
 \operatorname{tr}(A) = \lambda_1 + \cdots + \lambda_n,
 \quad
@@ -78,12 +83,14 @@ $$
 ## Diagonalizable Case (Intuition)
 
 If \( A \) is diagonalizable,
+
 $$
 A = SDS^{-1}, \quad
 D = \operatorname{diag}(\lambda_1,\dots,\lambda_n).
 $$
 
 Because trace is similarity-invariant,
+
 $$
 \operatorname{tr}(A) = \operatorname{tr}(D)
 = \lambda_1 + \cdots + \lambda_n.

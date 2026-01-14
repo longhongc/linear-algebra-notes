@@ -3,15 +3,19 @@
 ## 1. Linear Systems and Spectral Decomposition
 
 Consider a linear autonomous system
+
 $$
 \mathbf{x}'(t) = A \mathbf{x}(t),
 $$
+
 where $A \in \mathbb{R}^{n \times n}$.
 
 The general solution is constructed from exponential modes of the form
+
 $$
 e^{\lambda t}\mathbf{v},
 $$
+
 where $\lambda$ is an eigenvalue of $A$ and $\mathbf{v}$ is an eigenvector (or generalized eigenvector).
 
 Each eigenvalue contributes a **dynamical mode** to the solution.
@@ -21,6 +25,7 @@ Each eigenvalue contributes a **dynamical mode** to the solution.
 ## 2. Long-Term Behavior and Dominant Eigenvalues
 
 As $t \to \infty$, exponential terms behave according to their real parts:
+
 $$
 e^{\lambda_1 t} \gg e^{\lambda_2 t}
 \quad \text{if} \quad
@@ -57,9 +62,11 @@ Thus, for **qualitative analysis**, not all eigenvalues are equally important.
 For certain structured matrices (e.g. nonnegative, irreducible):
 
 - There exists a **dominant real eigenvalue**
+
 $$
   \lambda_{\mathrm{PF}} = \rho(A),
 $$
+
   larger in real part than all others.
 - The corresponding eigenvector is strictly positive.
 - Long-term behavior aligns with this single mode.

@@ -11,6 +11,7 @@ Does being **positive definite** imply all entries are positive?
 ## Definition: Positive Definite Matrix
 
 A real symmetric matrix $A \in \mathbb{R}^{n \times n}$ is **positive definite** if
+
 $$
 x^T A x > 0 \quad \text{for all } x \neq 0.
 $$
@@ -24,6 +25,7 @@ This condition depends on the **quadratic form**, not on individual matrix entri
 A matrix can have all positive entries but still fail to be positive definite.
 
 ### Example
+
 $$
 A =
 \begin{pmatrix}
@@ -46,6 +48,7 @@ Since one eigenvalue is negative, $A$ is **not** positive definite.
 A matrix can be positive definite even if some entries are negative.
 
 ### Example
+
 $$
 B =
 \begin{pmatrix}

@@ -9,9 +9,11 @@ As a result, fundamental spectral properties—such as eigenvalues and their mul
 
 ## Similarity Transformation
 Two \( n \times n \) matrices \( A \) and \( B \) are **similar** if
+
 $$
 B = P^{-1} A P
 $$
+
 for some invertible matrix \( P \).
 
 Similarity corresponds to rewriting a linear map in a different basis.
@@ -20,6 +22,7 @@ Similarity corresponds to rewriting a linear map in a different basis.
 
 ## Eigenvalues Are Invariant
 Similarity preserves the characteristic polynomial:
+
 $$
 \det(\lambda I - B)
 = \det(\lambda I - P^{-1} A P)
@@ -44,12 +47,14 @@ Since the characteristic polynomial is unchanged, algebraic multiplicity is pres
 ## Geometric Multiplicity
 **Definition:**  
 The geometric multiplicity of an eigenvalue \( \lambda \) is
+
 $$
 \dim \ker(A - \lambda I)
 $$
 
 **Why it is preserved:**
 If \( B = P^{-1} A P \), then
+
 $$
 \ker(B - \lambda I) = P^{-1} \ker(A - \lambda I)
 $$
@@ -66,6 +71,7 @@ So geometric multiplicity is invariant under similarity.
 
 ### Diagonalizability Is Preserved
 A matrix is diagonalizable if and only if, for every eigenvalue,
+
 $$
 \text{geometric multiplicity} = \text{algebraic multiplicity}
 $$

@@ -17,14 +17,18 @@ This note explains:
 Let \( A \in \mathbb{R}^{m \times n} \) with linearly independent columns.
 
 The **QR decomposition** is the factorization
+
 $$
 A = QR
 $$
+
 where:
 - \( Q \in \mathbb{R}^{m \times n} \) has **orthonormal columns**,
+
 $$
   Q^\top Q = I,
 $$
+
 - \( R \in \mathbb{R}^{n \times n} \) is **upper triangular** with positive diagonal entries.
 
 ---
@@ -46,6 +50,7 @@ Thus, QR decomposition separates:
 The **Gram–Schmidt process** converts a linearly independent set of vectors into an orthonormal set spanning the same space.
 
 Let the columns of \( A \) be
+
 $$
 A = [a_1 \; a_2 \; \cdots \; a_n].
 $$
@@ -53,14 +58,18 @@ $$
 ### Step 1: Orthogonalization
 
 Define vectors \( u_k \) recursively:
+
 $$
 u_1 = a_1,
 $$
+
 $$
 u_k = a_k - \sum_{j=1}^{k-1} \operatorname{proj}_{q_j}(a_k),
 \quad k \ge 2,
 $$
+
 where
+
 $$
 \operatorname{proj}_{q_j}(a_k) = (q_j^\top a_k)\, q_j.
 $$
@@ -72,6 +81,7 @@ Each \( u_k \) is orthogonal to all previous \( q_j \).
 ### Step 2: Normalization
 
 Normalize each \( u_k \):
+
 $$
 q_k = \frac{u_k}{\|u_k\|}.
 $$
@@ -88,10 +98,13 @@ These vectors form the columns of \( Q \).
 ## How \( R \) Appears
 
 Each column \( a_k \) can be written as a linear combination of \( q_1, \dots, q_k \):
+
 $$
 a_k = \sum_{j=1}^k r_{jk} q_j,
 $$
+
 where
+
 $$
 r_{jk} = q_j^\top a_k.
 $$
@@ -109,6 +122,7 @@ Collecting all coefficients \( r_{jk} \) gives the matrix \( R \).
 - **Gram–Schmidt constructs \( Q \)** by orthonormalizing the columns of \( A \).
 - **The projection coefficients produced by Gram–Schmidt form \( R \)**.
 - Writing the result in matrix form gives:
+
 $$
 A = QR.
 $$

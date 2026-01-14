@@ -14,6 +14,7 @@ This property is called **multilinearity**.
 Fix all rows except the \( i \)-th row.
 
 ### Additivity
+
 $$
 \det(R_1, \dots, R_i + S_i, \dots, R_n)
 =
@@ -23,6 +24,7 @@ $$
 $$
 
 ### Homogeneity
+
 $$
 \det(R_1, \dots, c R_i, \dots, R_n)
 =
@@ -36,9 +38,11 @@ Additivity + homogeneity define linearity.
 ## Multilinearity
 
 A function
+
 $$
 f : (\mathbb{R}^n)^n \to \mathbb{R}
 $$
+
 is **multilinear** if it is linear in each argument separately.
 
 The determinant is multilinear in its rows (and equivalently, in its columns).
@@ -54,6 +58,7 @@ The determinant is the unique function satisfying:
    - If two rows are equal, the determinant is zero  
    - Swapping two rows changes the sign  
 3. Normalization  
+
 $$
 \det(I_n) = 1
 $$
