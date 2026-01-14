@@ -96,7 +96,35 @@ def transform_text_outside_fences(text: str) -> str:
     # 3) IMPORTANT: ensure LaTeX row breaks survive Markdown
     text4 = _escape_latex_linebreaks_in_math(text3)
 
-    return text4
+    # 4) MkDocs/Markdown: ensure display math $$ ... $$ is surrounded by blank lines
+    return _ensure_blank_lines_around_display_math(text4)
+
+
+def _ensure_blank_lines_around_display_math(text: str) -> str:
+    """
+    Ensure lines that are exactly $$ are separated from text by blank lines.
+    """
+    lines = text.splitlines(keepends=True)
+    out: list[str] = []
+    in_display = False
+
+    for i, line in enumerate(lines):
+        if re.match(r"^\s*\$\$\s*$", line):
+            if not in_display:
+                if out and not re.match(r"^\s*$", out[-1]):
+                    out.append("\n")
+                out.append("$$\n" if line.endswith("\n") else "$$")
+                in_display = True
+            else:
+                out.append("$$\n" if line.endswith("\n") else "$$")
+                in_display = False
+                if i + 1 < len(lines) and not re.match(r"^\s*$", lines[i + 1]):
+                    out.append("\n")
+            continue
+
+        out.append(line)
+
+    return "".join(out)
 
 
 def transform_markdown_preserving_fences(src: str) -> str:
