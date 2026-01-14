@@ -5,7 +5,7 @@
 
 ## 1. Spectral (eigen) decomposition
 
-For a real symmetric matrix $$A \in \mathbb{R}^{n \times n}$$, the spectral theorem states that
+For a real symmetric matrix $A \in \mathbb{R}^{n \times n}$, the spectral theorem states that
 
 $$
 A = Q \Lambda Q^\top
@@ -16,8 +16,8 @@ where:
   $$
   Q^\top Q = QQ^\top = I
   $$
-- The columns of $$Q$$ are **orthonormal eigenvectors** of $$A$$
-- $\Lambda$ is a **diagonal matrix** containing the real eigenvalues of $$A$$
+- The columns of $Q$ are **orthonormal eigenvectors** of $A$
+- $\Lambda$ is a **diagonal matrix** containing the real eigenvalues of $A$
 
 ---
 
@@ -39,7 +39,7 @@ Orthonormality is strictly stronger than orthogonality.
 
 ## 3. A special property of orthonormal matrices
 
-For an orthonormal matrix $$Q$$:
+For an orthonormal matrix $Q$:
 
 - Rows are orthonormal
 - Columns are orthonormal
@@ -55,10 +55,10 @@ Consider
 $$
 M = D Q^\top
 $$
-where $$D$$ is diagonal (e.g. an eigenvalue matrix).
+where $D$ is diagonal (e.g. an eigenvalue matrix).
 
 ### Effect on rows
-- Left-multiplication by $$D$$ scales rows
+- Left-multiplication by $D$ scales rows
 - Row orthogonality is preserved
 
 ### Effect on columns
@@ -68,7 +68,7 @@ M^\top M = Q D^2 Q^\top
 $$
 which is generally **not** the identity matrix.
 
-Therefore, the columns of $$DQ^\top$$ are **not orthogonal in general**, even if the rows are.
+Therefore, the columns of $DQ^\top$ are **not orthogonal in general**, even if the rows are.
 
 ---
 
@@ -76,7 +76,7 @@ Therefore, the columns of $$DQ^\top$$ are **not orthogonal in general**, even if
 
 > Orthogonal rows do **not** imply orthogonal columns.
 
-This implication holds **only** for orthonormal matrices such as $$Q$$.
+This implication holds **only** for orthonormal matrices such as $Q$.
 
 ---
 
@@ -95,7 +95,7 @@ $$
 
 ---
 
-## 7. Why $$Q \Lambda Q^\top$$ is not diagonal
+## 7. Why $Q \Lambda Q^\top$ is not diagonal
 
 Interpret the decomposition as:
 1. $Q^\top$: rotate into the eigenbasis
